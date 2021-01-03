@@ -23912,13 +23912,27 @@ module.exports = function(originalModule) {
 /*!************************************!*\
   !*** ./reducers/giphys_reducer.js ***!
   \************************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/giphy_actions */ "./actions/giphy_actions.js");
 
+
+var giphysReducer = function giphysReducer(state, action) {
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SEARCH_GIPHYS"]:
+      return Object.assign({}, state, action.giphys);
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (giphysReducer);
 
 /***/ }),
 
