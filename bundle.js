@@ -96,7 +96,6 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/api_util */ "./util/api_util.js");
-/* harmony import */ var _util_api_util__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_util_api_util__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),
@@ -23943,10 +23942,34 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************!*\
   !*** ./util/api_util.js ***!
   \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: fetchSearchGiphys */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSearchGiphys", function() { return fetchSearchGiphys; });
+/* harmony import */ var _dev_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dev_keys */ "./util/dev_keys.js");
 
+var fetchSearchGiphys = function fetchSearchGiphys(searchTerm) {
+  return $.ajax({
+    method: 'get',
+    url: "http://api.giphy.com/v1/gifs/search?q=".concat(searchTerm, "&api_key=").concat(_dev_keys__WEBPACK_IMPORTED_MODULE_0__["default"], "&limit=2")
+  });
+};
+
+/***/ }),
+
+/***/ "./util/dev_keys.js":
+/*!**************************!*\
+  !*** ./util/dev_keys.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var DEV_KEY = 'L71a8OGkUIh5R6at9kvVMuY3nminlELP';
+/* harmony default export */ __webpack_exports__["default"] = (DEV_KEY);
 
 /***/ })
 
